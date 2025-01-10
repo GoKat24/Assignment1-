@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wunschliste</title>
+  <link rel="stylesheet" href="wishlist.css">
+</head>
+<body>
+<header>
+  <nav>
+    <div class="menu-toggle" id="mobile-menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <ul class="nav-list">
+      <li><a href="gluh.html">Home</a></li>
+      <li><a href="music.html">Musik</a></li>
+      <li><a href="naschereien.html">Naschereien</a></li>
+      <li><a href="activity.html">Aktivitäten</a></li>
+      <li><a href="wishlist.html">Wunschbox</a></li>
+      <li><a href="#comments">Kommentare</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section id="wishlist" class="wishlist">
+    <h2>Wunschbox</h2>
+    <p>Teile deine Lieblingslieder oder -genres mit uns, damit wir die perfekte Playlist für dich erstellen können!</p>
+
+    <form id="wishlist-form">
+      <label for="song-name">Songname:</label>
+      <input type="text" id="song-name" name="song-name" placeholder="Dein Lieblingssong..." required>
+
+      <label for="artist">Künstler:</label>
+      <input type="text" id="artist" name="artist" placeholder="Künstler des Songs..." required>
+
+      <label for="genre">Genre:</label>
+      <input type="text" id="genre" name="genre" placeholder="z. B. Rock, Reggae, Klassik..." required>
+
+      <button type="submit" class="btn">Wunsch einreichen</button>
+    </form>
+
+    <div class="top-wishes">
+      <h3>Top-Wünsche der Woche:</h3>
+      <ul>
+        <li>„Another Rock and Roll Christmas“ - Iron Maiden</li>
+        <li>„O Come All Ye Faithful“ - Freddie McGregor</li>
+        <li>„Run Rudolph Run“ - Chuck Berry</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document.getElementById("mobile-menu").addEventListener("click", function () {
+      document.querySelector(".nav-list").classList.toggle("active");
+    })
+  });
+
+  document.querySelectorAll(".nav-list a"). forEach(link => {
+    link.addEventListener("click", function () {
+      document.querySelector(".nav-list").classList.remove("active");
+    })
+  })
+</script>
+
+<footer>
+  <p>&copy; 2024 Weihnachtszeit mal anders. Alle Rechte vorbehalten.</p>
+</footer>
+</body>
+</html>

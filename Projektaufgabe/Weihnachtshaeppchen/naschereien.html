@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naschereien</title>
+    <link rel="stylesheet" href="naschereien.css">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="gluh.html">Home</a></li>
+            <li><a href="music.html">Musik</a></li>
+            <li><a href="naschereien.html">Naschereien</a></li>
+            <li><a href="activity.html">Aktivitäten</a></li>
+            <li><a href="wishlist.html">Wunschbox</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="culinary" class="culinary-section">
+        <h1>Naschereien</h1>
+        <p>Genießen Sie unsere warmen und köstlichen Angebote, die Ihrer Weihnachtszeit eine süße Note verleihen.</p>
+
+        <div class="culinary-items">
+            <div class="item">
+                <img src="Gluehwein.jpg" alt="Glühwein">
+                <h3>Glühwein</h3>
+                <p>Aromatischer Glühwein, heiß serviert.<strong>€6</strong></p>
+            </div>
+            <div class="item">
+                <img src="punsch.jpg" alt="Punsch">
+                <h3>Punsch</h3>
+                <p>Fruchtiger Punsch, erhältlich in alkoholischen und nicht-alkoholischen Varianten.<strong>€5</strong></p>
+            </div>
+            <div class="item">
+                <img src="eggnog.jpg" alt="Eggnog">
+                <h3>Eggnog</h3>
+                <p>Cremiger und reichhaltiger Eggnog, verfeinert mit warmen Gewürzen und einem Hauch festlicher Freude.<strong>€6</strong></p>
+            </div>
+            <div class="item">
+                <img src="waffel.jpeg" alt="Waffeln">
+                <h3>Waffeln</h3>
+                <p>Frisch gebackene Waffeln mit individuell wählbaren Toppings.<strong>€5</strong></p>
+            </div>
+            <div class="item">
+                <img src="Baumkuchen.jpg" alt="Baumkuchen">
+                <h3>Baumkuchen</h3>
+                <p>Traditioneller Baumkuchen mit einer modernen Note.<strong>€7</strong></p>
+            </div>
+            <div class="item">
+                <img src="Weihnachtspizza1.jpg" alt="Tannenbäumchen">
+                <h3>Pizzatanne</h3>
+                <p>Leckere Tannenbaumspieße aus Blätterteig .<strong>€7</strong></p>
+            </div>
+            <div class="item">
+                <img src="Weihnachtshaeppchen.jpg" alt="Weihnachtshäppchen">
+                <h3>Weihnachtshäppchen</h3>
+                <p>Häppchenplatte 6 Stück.<strong>€12</strong></p>
+            </div>
+            <div class="item">
+                <img src="Tornadokartoffeln.jpg" alt="Tornado-Kartoffel">
+                <h3>Kartoffeltornado</h3>
+                <p>Knusprige Kartoffelspirale am Spieß.<strong>€5</strong></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("mobile-menu").addEventListener("click", function () {
+            document.querySelector(".nav-list").classList.toggle("active");
+        })
+    });
+
+    document.querySelectorAll(".nav-list a"). forEach(link => {
+        link.addEventListener("click", function () {
+            document.querySelector(".nav-list").classList.remove("active");
+        })
+    })
+</script>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section contact">
+            <h3>Kontakt</h3>
+            <p>Adresse: Weihnachtsstraße 123, 1010 Wien</p>
+            <p>E-Mail: <a href="mailto:info@weihnachtszeit-anders.at">info@weihnachtszeit-anders.at</a></p>
+
+            <p>Telefon: +43 123 456 789</p>
+        </div>
+
+        <div class="social-media">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a>
+        </div>
+
+        <div class="footer-section legal">
+            <p>&copy; 2024 Weihnachtszeit mal anders. Alle Rechte vorbehalten.</p>
+            <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

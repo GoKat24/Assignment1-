@@ -1,0 +1,209 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fef8e6;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #b22222;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color: #b22222;
+    font-family: Century,serif;
+    margin-bottom: 35px;
+}
+
+h2 {
+    color: #b22222;
+    font-family: Century,serif;
+    margin-top: 70px;
+    margin-bottom: 35px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list.active {
+    display: block;
+}
+
+/* Music Section */
+.music-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+/* Weekly Music Calendar */
+.week-calendar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.day {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.day2 {
+    background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)),
+    url('../Bilder/concert5.jpg') no-repeat center center/cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px 20px;
+    width: 120px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+
+.day:hover {
+    transform: scale(1.05);
+
+}
+
+.day h3 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    color: #b22222;
+}
+
+/* Music Preview */
+.music-preview {
+    margin-top: 40px;
+}
+
+.music-preview h2 {
+    color: #b22222;
+}
+
+.week-schedule {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+audio {
+    width: 100%;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #b22222;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #800000;
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+    background: #b22222;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    line-height: 0.5;
+}
+
+footer .legal {
+    margin-bottom: 20px; /* Abstand nur für den letzten Bereich*/
+}
+
+
+/* Anpassung für mobile Geräte */
+@media (max-width: 768px) {
+    .week-calendar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .week-calendar .row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .week-calendar .day {
+        width: 90%; /* Breite von 90% für kleine Bildschirme */
+        margin-bottom: 15px; /* Abstand zwischen den Tagen */
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: #b22222;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+}

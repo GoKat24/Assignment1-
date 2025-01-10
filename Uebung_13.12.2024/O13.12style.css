@@ -1,0 +1,26 @@
+/*Allgemeine Seite*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #444;
+}
+
+header {
+    background-color: #444;
+    color: white;
+    padding: 100px 0;
+
+}
+
+header .menu ul{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+header .manu a

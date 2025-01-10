@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weihnachtsmarkt mal anders</title>
+    <link rel="stylesheet" href="gluh.css">
+</head>
+<body>
+<!-- Navigation -->
+<header>
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="gluh.html">Home</a></li>
+            <li><a href="music.html">Musik</a></li>
+            <li><a href="naschereien.html">Naschereien</a></li>
+            <li><a href="activity.html">Aktivitäten</a></li>
+            <li><a href="wishlist.html">Wunschbox</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- Hero-Bereich -->
+
+        <section id="home" class="hero">
+            <div class="hero-header">
+                <h1>Weihnachtsmarkt mal anders</h1>
+                <div class="bells">
+                    <img src="../Bilder/Glocken5.png" alt="Glocke links" class="bell bell-left">
+                    <img src="../Bilder/Glocken5.png" alt="Glocke rechts" class="bell bell-right">
+                </div>
+            </div>
+            <p>Glühwein, Punsch und Waffeln zu Metal, Reggae oder Klassik – erlebt die Weihnachtszeit ganz neu!</p>
+<!--            <div class="center-notes">-->
+<!--                <img src="notes.png" alt="Noten">-->
+<!--            </div>-->
+        </section>
+
+<!-- Musik-Vorschau -->
+    <section id="music" class="music">
+        <h2>Musikalische Wochenvorschau</h2>
+        <div class="week-schedule">
+            <div class="day">
+                <h3>Freitag</h3>
+                <p>Metal Night</p>
+            </div>
+            <div class="day">
+                <h3>Samstag</h3>
+                <p>Reggae Vibes</p>
+            </div>
+            <div class="day">
+                <h3>Sonntag</h3>
+                <p>Classic Rock</p>
+            </div>
+        <!-- Weitere Tage -->
+        </div>
+        <a href="music.html" class="btn">Mehr zur Musik</a>
+    </section>
+
+<!-- Kulinarik -->
+    <section id="culinary" class="culinary">
+        <h2>Kulinarische Highlights</h2>
+        <p>Von heißen Baumkuchen bis hin zu leckeren Waffeln – hier findet jeder etwas.</p>
+        <a href="naschereien.html" class="btn">Naschereien entdecken</a>
+    </section>
+
+<!-- Aktivitäten -->
+    <section id="activities" class="activities">
+        <h2>Aktivitäten</h2>
+        <p>Probiert euch im Eisstockschießen oder genießt die Atmosphäre bei einem heißen Getränk.</p>
+        <a href="activity.html" class="btn">Mehr über Aktivitäten</a>
+    </section>
+
+<!-- Musikwunschbox -->
+    <section id="wishlist" class="wishlist">
+        <h2>Musikwunschbox</h2>
+        <form>
+            <label for="wish">Dein Musikwunsch:</label>
+            <input type="text" id="wish" name="wish" placeholder="Dein Lieblingslied">
+            <button type="submit">Wunsch einreichen</button>
+        </form>
+        <a href="wishlist.html" class="btn">Mehr zur Wunschbox</a>
+    </section>
+
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("mobile-menu").addEventListener("click", function () {
+            document.querySelector(".nav-list").classList.toggle("active");
+        })
+    });
+
+    document.querySelectorAll(".nav-list a"). forEach(link => {
+        link.addEventListener("click", function () {
+            document.querySelector(".nav-list").classList.remove("active");
+        })
+    })
+</script>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section contact">
+            <h3>Kontakt</h3>
+            <p>Adresse: Weihnachtsstraße 123, 1010 Wien</p>
+            <p>E-Mail: <a href="mailto:info@weihnachtszeit-anders.at">info@weihnachtszeit-anders.at</a></p>
+
+            <p>Telefon: +43 123 456 789</p>
+        </div>
+
+    <div class="social-media">
+        <a href="#">Facebook</a> | <a href="#">Instagram</a>
+    </div>
+
+    <div class="footer-section legal">
+        <p>&copy; 2024 Weihnachtszeit mal anders. Alle Rechte vorbehalten.</p>
+        <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+    </div>
+    </div>
+</footer>
+</body>
+</html>

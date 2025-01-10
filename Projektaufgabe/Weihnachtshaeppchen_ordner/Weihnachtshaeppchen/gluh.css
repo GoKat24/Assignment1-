@@ -1,0 +1,245 @@
+/* Allgemein */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fef8e6;
+    color: #333;
+}
+
+/* Navigation */
+
+header {
+    background: #b22222;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+/* Burger menu default (hidden for desktops) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list.active {
+    display: block;
+}
+
+/* Hero-Bereich */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    padding-bottom: 60px;
+    /*background: url('hero-image.jpg') no-repeat center center/cover;*/
+    color: #b22222;
+    position: relative;
+}
+
+.hero h1 {
+    font-family: Century;
+    font-size: 3rem; /* Schriftgröße */
+    z-index: 10; /* Sicherstellen, dass der Text vor den Glocken erscheint */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+/*------------Glocken mit h1 verbunden-------------------*/
+.hero-header {
+    position: relative;
+    text-align: center; /* Zentriert sowohl das h1 als auch die Glocken */
+}
+
+.hero-header h1 {
+    font-size: 3rem;
+    margin: 0; /* Kein Abstand nach unten */
+    position: relative;
+    z-index: 10; /* Glocken bleiben hinter dem Text */
+}
+
+.bells {
+    position: absolute;
+    top: -20px; /* Positioniere die Glocken relativ zum h1 */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    width: 820px; /* Breite für den Glocken-Container */
+}
+
+.bell {
+    width: 75px;
+    animation: swing 2s ease-in-out infinite;
+}
+.bell-left {
+    animation-delay: 0s;
+}
+.bell-right {
+    animation-delay: 0.5s;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+/* Sektionen */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.music, .culinary, .activities, .wishlist {
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.music {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('../Bilder/gitarre2.png') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+}
+
+.culinary {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('../Bilder/Gluehwein.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+
+}
+
+.activities {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('../Bilder/eisstock.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+
+}
+
+.wishlist {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('../Bilder/schallplatte.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #b22222;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #800000;
+}
+
+/* Wunschboxbutton*/
+
+.wishlist form {
+    margin-top: 20px; /* Abstand über dem Formular */
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+    background: #b22222;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    line-height: 0.5;
+}
+
+footer .legal {
+    margin-bottom: 20px; /* Abstand nur für den letzten Bereich im Footer */
+}
+
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: #b22222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}

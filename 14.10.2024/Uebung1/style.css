@@ -1,0 +1,69 @@
+/* CSS-DAtei zur Gestaltung der HTML-Seite
+
+/* Übung 1: Hintergrundfarbe auf Gold ändern */
+
+/* Übung 2: Hover Effekt auf Links anwenden */
+
+/* Übung 3: Einen Rahmen für Absätze
+
+/*Globale Einstellungen */
+
+body {
+    font-family: Arial, sans-serif;
+    /* backround-color: #c17171;*/
+    background-color: Gold; /*Übungs 1*/
+    color: #000000;
+    margin: 0;
+    padding:20px;
+}
+
+/*Überschriften gestalten*/
+
+h1 {
+    color: #007bff;
+    text-align: center;
+    font-size: 2.5rem;
+    padding-bottom:10px;
+}
+
+h2 {
+    color:rgb(9, 120, 46);
+    font-size: 1.8rem;
+    border-bottom:2px solid;
+    padding bottom: 5px;
+}
+
+p {
+    font-size:1.1rem;
+    line-height:1.6;
+    border:#000000 solid 1px; /*Ü3*/
+}
+
+ul {
+    list-style-type: square;
+    padding-left: 40px;
+}
+li {
+    font-size: 1.1re;
+    color: #007bff;
+}
+
+.HTMLLernen {
+    color:#c17171
+}
+
+ol .HTMLLernen {
+    color: green;
+}
+#ordered {
+    color: orange;
+}
+
+a:link {
+    color:red;
+}
+#/*Hovereffekt auf Links anwenen Übung 2*/
+a:hover {
+    color:aquamarine;
+}
+

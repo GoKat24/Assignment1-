@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: auto;
+    padding: 10px;
+    line-height: 1.6;
+    background-color: darkblue;
+}
+
+header {
+    background-color: darkslategrey;
+    color: chocolate;
+    padding: 1rem 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Zentriert vertikal */
+    padding: 0 0;
+}
+
+.nav-list {
+    list-style: none; /* entfernt die standard punkte bei der Liste */
+    display: flex; /* Liste wird horizontal dargestellt */
+    gap: 1rem; /* Abstand zw Listen-Elemente */
+    padding: 0; /* Innenabstand */
+    margin: 10px; /* Außenabstand */
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: chocolate;
+    padding: 1rem;
+}
+
+.nav-list li a:hover {
+    background-color: darkslategrey;
+    border-radius: 10px; /* rundet die Ecken ab */
+}
+
+main {
+    padding: 10px;
+}
+
+.responsive-image, picture {
+    width: 100%;
+    height: auto;
+    display: block; /* Verhindert die inline Darstellung */
+    max-width: 100%; /* stellt sicher, dass das Bild nixt größer als seine max. Größe wird */
+    margin: 0;
+}
+
+#about {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    padding: 10px;
+    text-align: justify; /* justify -> Blocksatz */
+}
+
+.menu-toggle {
+    display: none; /* Versteckt den Burger-Button auf großen Bildschirm */
+    flex-direction: column; /* Richtet die Burger-Linie vertikal aus */
+    cursor: pointer; /* Cursor wird zur Hand */
+}
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+
+}
+
+@media (max-width: 780px) {
+    .menu-toggle {
+        display: flex; /* Zeigt das Burger-Menü auf Bildschirm */
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: darkslategrey;
+        position: absolute;
+        top: 60px;
+        left:10px;
+        padding: 20px;
+
+    }
+
+    .nav-list li {
+        text-align: center;
+        border-bottom: 1px solid;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li: last-child {
+        border: none;
+    }
+}

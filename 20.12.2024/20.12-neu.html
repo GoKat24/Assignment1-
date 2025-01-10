@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" content="width=device-width, inital-scale=1.0">
+    <link rel="stylesheet" href="Style.css">
+    <title>Über mich</title>
+</head>
+<body>
+<header>
+    <nav class="navbar">
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+            </div>
+
+        <ul class="nav-list">
+            <li><a href="#about">Über Mich</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<main>
+
+    <section id="about">
+        <h1>Über mich</h1>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+
+        <picture>
+            <source srcset="ocean-waves.jpg" media="(min-width:1200px)">
+            <source srcset="" media="(min-width:780px)">
+            <img src="./ocean-waves.jpg" alt="Ein Bild von mir" class="responsive-image">
+        </picture>
+
+    </section>
+
+    <section id="hobbies">
+        <h2>Hobbys</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. </p>
+    </section>
+
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("mobile-menu").addEventListener("click", function () {
+            document.querySelector(".nav-list").classList.toggle("active");
+
+        })
+    });
+
+    document.querySelectorAll(".nav-list a"). forEach(link => {
+        link.addEventListener("click", function() {
+            document.querySelector(".na")
+        })
+    })
+</script>
+
+</body>
+
+
+</html>

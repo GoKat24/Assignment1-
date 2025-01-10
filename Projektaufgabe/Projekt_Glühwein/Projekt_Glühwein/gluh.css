@@ -1,0 +1,252 @@
+/* Allgemein */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #fef8e6;
+    color: #333;
+}
+
+/* Navigation */
+
+header {
+    background: #b22222;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+/* Burger menu default (hidden for desktops) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list.active {
+    display: block;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: #b22222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
+
+/* Hero-Bereich */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    /*background: url('hero-image.jpg') no-repeat center center/cover;*/
+    color: #b22222;
+    position: relative;
+}
+
+.hero h1 {
+    font-family: Century;
+    font-size: 3rem; /* Schriftgröße */
+    z-index: 10; /* Sicherstellen, dass der Text vor den Glocken erscheint */
+
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    background: #b22222;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Sektionen */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.music, .culinary, .activities, .wishlist {
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    border-radius: 10px;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.music {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('Musik2.jpeg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+}
+
+.culinary {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('Gluehwein.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+
+}
+
+.activities {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('eisstock.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+
+}
+
+.wishlist {
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('schallplatte.jpg') no-repeat center center/cover;
+    background-size: cover;
+    color: white;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #b22222;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #800000;
+}
+
+/* Wunschboxbutton*/
+
+.wishlist form {
+    margin-top: 20px; /* Abstand über dem Formular */
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+    background: #b22222;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    line-height: 0.5;
+}
+
+footer .legal {
+    margin-bottom: 20px; /* Abstand nur für den letzten Bereich im Footer */
+}
+
+
+
+/* Glocken */
+
+.bell {
+    width: 95px; /* Größe der Glocken */
+    height: auto;
+    opacity: 1; /* Glocken sind immer sichtbar */
+    animation: swing 2s ease-in-out infinite; /* Glocken schwingen unendlich */
+}
+
+.bells {
+    position: absolute;
+    top: 40%;
+    left: 50%; /* Positioniert die Glocken mittig */
+    transform: translateX(-50%) translateY(-60%); /* Verschiebt die Glocken nach der Mitte */
+    display: flex;
+    justify-content: space-between; /* Glocken werden gleichmäßig verteilt */
+    width: 65%; /* Breite der Glocken-Container */
+    z-index: 5; /* Glocken hinter dem Text */
+
+}
+
+
+.bell-left {
+    animation-delay: 0s; /* Glocke links ohne Verzögerung */
+}
+
+.bell-right {
+    animation-delay: 0.5s; /* Glocke rechts etwas später */
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-10deg); /* Startposition: Leicht nach links */
+    }
+    50% {
+        transform: rotate(10deg); /* Schwingen nach rechts */
+    }
+    100% {
+        transform: rotate(-10deg); /* Zurück in die Ausgangsposition */
+    }
+}
+
+

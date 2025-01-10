@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Musik</title>
+  <link rel="stylesheet" href="music.css">
+</head>
+<body>
+<header>
+
+
+</header>
+
+<main>
+
+  <section id="music" class="music">
+    <h2>Musikalische Wochenvorschau</h2>
+    <div class="week-schedule">
+      <div class="day">
+        <h3>Freitag</h3>
+        <p>Metal Night</p>
+        <audio controls>
+          <source src="Iron_Maiden-Another_rock_and_roll_Christmas.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="day">
+        <h3>Samstag</h3>
+        <p>Reggae Vibes</p>
+        <audio controls>
+          <source src="Freddie_McGregor-Come_All_Ye_Faithful.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+
+      <div class="day">
+        <h3>Sonntag</h3>
+        <p>Classic Rock</p>
+        <audio controls>
+          <source src="Chuck_Berry-Run_Rudolph_Run.mp3" type="audio/mpeg">
+        </audio>
+      </div>
+      <!-- Weitere Tage -->
+    </div>
+
+    <div class="filters">
+      <label for="music-filter">Filter by Genre:</label>
+      <select id="music-filter">
+        <option value="all">All</option>
+        <option value="rock">Metal</option>
+        <option value="classical">Reggae</option>
+        <option value="reggae">Rock</option>
+      </select>
+    </div>
+
+    <a href="music.html" class="btn">Mehr zur Musik</a>
+  </section>
+
+</main>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const filterSelect = document.getElementById("music-filter");
+    const days = document.querySelectorAll(".day");
+
+    filterSelect.addEventListener("change", function () {
+      const filterValue = filterSelect.value;
+      days.forEach(day => {
+        if (filterValue === "all" || day.dataset.genre === filterValue) {
+          day.style.display = "block";
+        } else {
+          day.style.display = "none";
+        }
+      });
+    });
+
+    // Mobile menu toggle
+    document.getElementById("mobile-menu").addEventListener("click", function () {
+      document.querySelector(".nav-list").classList.toggle("active");
+    });
+  });
+</script>
