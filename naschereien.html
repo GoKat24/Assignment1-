@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naschereien</title>
+    <link rel="stylesheet" href="naschereien.css">
+    <link rel="icon" href="Bilder/Glocken_l.png" type="image/png">
+</head>
+<body>
+<header>
+    <nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="music.html">Musik</a></li>
+            <li><a href="naschereien.html">Naschereien</a></li>
+            <li><a href="activity.html">Aktivitäten</a></li>
+            <li><a href="wishlist.html">Wunschbox</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="culinary" class="culinary-section">
+        <h1>Naschereien</h1>
+        <p><strong>Probiere unsere warmen und köstlichen Angebote, die deine Weihnachtszeit versüßt.</strong></p>
+
+        <div class="culinary-items">
+            <div class="item">
+                <img src="Bilder/Gluehwein.jpg" alt="Glühweintassen mit weihnachtlichen Hintergrund">
+                <h3>Glühwein</h3>
+                <p>Aromatischer Glühwein, heiß serviert.
+                    <br>
+                    <strong>€6</strong></p>
+            </div>
+            <div class="item">
+                <img src="Bilder/punsch.jpg" alt="Punschtasse mit weihnachtlichem Hintergrund">
+                <h3>Punsch</h3>
+                <p>Fruchtiger Punsch, erhältlich in alkoholischen und nicht-alkoholischen Varianten.
+                    <br>
+                    <strong>€5</strong></p>
+            </div>
+            <div class="item">
+                <img src="Bilder/eggnog.jpg" alt="weihnachtlicher Eggnog mit Zuckerstange">
+                <h3>Eggnog</h3>
+                <p>Cremiger und reichhaltiger Eggnog, verfeinert mit warmen Gewürzen und einem Hauch festlicher Freude.
+                    <br>
+                    <strong>€6</strong></p>
+            </div>
+            <div class="item">
+                <img src="Bilder/waffel.jpeg" alt="weihnachtliche Waffeln mit Marmelade und Staubzucker">
+                <h3>Waffeln</h3>
+                <p>Frisch gebackene Waffeln mit individuell wählbaren Toppings.
+                    <br>
+                    <strong>€5</strong></p>
+            </div>
+            <div class="item">
+                <img src="Bilder/Baumkuchen.jpg" alt="Baumkuchen vor Tannenzweigen">
+                <h3>Baumkuchen</h3>
+                <p>Traditioneller Baumkuchen mit einer modernen Note.
+                    <br>
+                    <strong>€7</strong></p>
+            </div>
+            <div class="item">
+                <img src="Bilder/Weihnachtspizza1.jpg" alt="Pizzablätterteig Snacks in Form eines Tannenbaums am Spieß">
+                <h3>Pizzatanne</h3>
+                <p>Leckere Tannenbaumspieße aus Blätterteig.
+                    <br>
+                    <strong>€7</strong></p>
+            </div>
+            <div class="item">
+                <img src="Bilder/Weihnachtshaeppchen.jpg" alt="weihnachtliche Brötchen">
+                <h3>Weihnachtshäppchen</h3>
+                <p>Häppchenplatte 6 Stück.
+                    <br>
+                    <strong>€12</strong></p>
+            </div>
+            <div class="item">
+                <img src="Bilder/Tornadokartoffeln.jpg" alt="Tornado-Kartoffel Spieße">
+                <h3>Kartoffeltornado</h3>
+                <p>Knusprige Kartoffelspirale am Spieß.
+                    <br>
+                    <strong>€5</strong></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("mobile-menu").addEventListener("click", function () {
+            document.querySelector(".nav-list").classList.toggle("active");
+        })
+    });
+
+    document.querySelectorAll(".nav-list a"). forEach(link => {
+        link.addEventListener("click", function () {
+            document.querySelector(".nav-list").classList.remove("active");
+        })
+    })
+</script>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section contact">
+            <h3>Kontakt</h3>
+            <p>Adresse: Weihnachtsstraße 123, 1010 Wien</p>
+            <p>E-Mail: <a href="mailto:info@weihnachtszeit-anders.at">info@weihnachtszeit-anders.at</a></p>
+
+            <p>Telefon: +43 123 456 789</p>
+        </div>
+
+        <div class="social-media">
+            <a href="#">Facebook</a> | <a href="#">Instagram</a>
+        </div>
+
+        <div class="footer-section legal">
+            <p>&copy; 2024 Glühsounds. Alle Rechte vorbehalten.</p>
+            <a href="impressum.html">Impressum</a> | <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

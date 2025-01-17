@@ -1,0 +1,262 @@
+/* Allgemein */
+body {
+    font-family: "Calibri", "Arial", sans-serif;
+    font-size: 1.2rem;
+    margin: 0; /* Außenabstand */
+    padding: 0; /* Innenabstand */
+    background: #FAF5E0;
+
+}
+
+ /* header */
+header {
+    background: #9c2828;
+    padding: 15px 25px;
+    position: sticky; /* Fixiert den Header */
+    top: 0; /* Oben fixiert */
+    z-index: 1000; /* Header vor anderen Elementen */
+}
+
+header nav ul {
+    display: flex; /* Flexbox für horizontale Anordnung */
+    justify-content: center;
+    list-style: none; /* Keine Aufzählungszeichen */
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px; /* Abstand zwischen Listenelementen */
+    font-size: 1.2rem; /* Schriftgröße */
+}
+
+header nav ul li a {
+    text-decoration: none; /* Entfernt die Unterstreichung der Links */
+    color: white;
+    font-weight: bold; /* Macht den Text der Links fett */
+}
+
+/* Burger menu default (hidden for desktops) */
+.menu-toggle {
+    display: none; /* Versteckt das Burger-Menü standardmäßig */
+    flex-direction: column; /* Striche im Burger-Menü vertikal*/
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white; /* Farbe der Balken */
+    height: 3px; /* Höhe der Balken */
+    width: 25px;
+    margin: 4px 0; /* Abstand zwischen den Balken 4px vertikalen */
+    transition: 0.3s; /* Übergangsanimation */
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list.active {
+    display: block;
+}
+
+/* Hero-Bereich + Glocken*/
+.hero {
+    text-align: center;
+    padding: 100px 20px 0 0; /*oben,unten 100px, links, rechts Abstand */
+    color: #9c2828;
+    position: relative; /* Setzt die Position auf relativ, um es für absolute Positionierungen innerhalb des Elements zu ermöglichen */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 15px 0;
+    font-weight: bold;
+}
+/*------------ Glocken ---------------*/
+.hero-header /* nur Text */ {
+    position: relative;
+    text-align: center; /* Zentriert sowohl das h1 als auch die Glocken */
+}
+
+.hero-header h1 {
+    font-family: "Berlin Sans FB", "Arial", sans-serif;
+    font-size: 3rem;
+    margin: 0; /* Kein Abstand nach unten */
+    position: relative;
+    z-index: 10; /* Glocken bleiben hinter dem Text */
+}
+
+.hero-header h2 {
+    font-family: "Berlin Sans FB", "Arial", sans-serif;
+    font-size: 2.5rem;
+    margin: 0; /* Kein Abstand nach unten */
+    position: relative;
+    z-index: 10; /* Glocken bleiben hinter dem Text */
+}
+
+.bells {
+    display: flex; /* Flexbox für horizontales Layout */
+    justify-content: space-between; /* Abstand zwischen den Glocken */
+    align-items: center; /* Zentrierung vertikal */
+    gap: 20px; /* Standardabstand zwischen den Glocken */
+    position: absolute;  /* Positioniert die Glocken absolut im Verhältnis zu ihrem Container */
+    top: 23px;
+    left: 50%; /* Positioniert die Glocken horizontal in der Mitte */
+    transform: translateX(-50%); /* Verschiebt die Box um die Hälfte ihrer eigenen Breite nach links, sodass sie horizontal zentriert wird. */
+    width: 45%;
+}
+
+.bell {
+    width: 75px;
+    animation: swing 2s ease-in-out infinite;
+}
+.bell-left {
+    animation-delay: 0s;
+}
+.bell-right {
+    animation-delay: 1.0s;
+}
+
+@keyframes swing {
+    0% {
+        transform: rotate(-10deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+    }
+}
+
+/* Sektionen */
+section {
+    padding: 50px 20px;
+    text-align: center; /* Zentriert den Text in den Sektionen */
+}
+
+.music, .culinary, .activities, .wishlist {
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 20px auto;
+    border-radius: 10px; /* Abrundung der Ecken mit einem Radius von 10px */
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Fügt einen Schatten mit leichtem Versatz und Transparenz hinzu */
+    position: relative;
+    text-align: center;
+    padding: 50px 20px;
+    background-size: cover; /* Sorgt dafür, dass das Hintergrundbild den gesamten Container abdeckt */
+    color: white;
+}
+
+.music {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url('Bilder/gitarre2.png') no-repeat center center/cover;
+}
+
+.culinary {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('Bilder/Gluehwein.jpg') no-repeat center center/cover;
+}
+
+.activities {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('Bilder/eisstock.jpg') no-repeat center center/cover;
+}
+
+.wishlist {
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('Bilder/schallplatte.jpg') no-repeat center center/cover;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block; /* Macht den Button zu einem Inline-Block-Element */
+    margin-top: 20px;
+    background: #b22222;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none; /* Entfernt die Unterstreichung des Links */
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #800000;
+}
+
+/* Wunschboxbutton*/
+.wishlist form {
+    margin-top: 20px; /* Abstand über dem Formular */
+}
+
+.wishlist button {
+    background: #b22222;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+    background: #9c2828;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    line-height: 0.5;
+}
+
+footer .legal {
+    margin-bottom: 20px; /* Abstand nur für den letzten Bereich im Footer */
+}
+
+footer a {
+    color: #461002; /* Ändere die Linkfarbe auf Gelb */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    font-weight: bold; /* Macht den Link fett */
+}
+
+footer a:hover {
+    color: white; /* Ändere die Linkfarbe beim Hover auf Weiß */
+    text-decoration: underline; /* Zeigt eine Unterstreichung beim Hover */
+}
+
+@media screen and (min-width: 1500px) {
+    .bells {
+        justify-content: center; /* Glocken in der Mitte auf kleinen Bildschirmen */
+        gap: 50%; /* Abstand zwischen den Glocken in der Mitte */
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex; /* Macht das Burger-Menü sichtbar bei Bildschirmen kleiner als 768px */
+    }
+
+    .nav-list {
+        display: none; /* Versteckt die Navigationsliste standardmäßig */
+        flex-direction: column; /* Ordnet die Listenelemente vertikal an */
+        background: #9c2828;
+        position: absolute;
+        top: 60px; /* Platziert die Liste 60px vom oberen Rand */
+        right: 0;
+        width: 100%; /* Die Liste nimmt die gesamte Breite des Bildschirms ein */
+    }
+
+
+    .nav-list.active {
+        display: flex; /* Macht die Liste sichtbar, wenn sie aktiv ist */
+    }
+
+    .nav-list li {
+        text-align: center; /* Zentriert die Glocken horizontal auf kleinen Bildschirmen */
+        margin: 10px 0;
+    }
+
+    .bells {
+        justify-content: center; /* Glocken in der Mitte auf kleinen Bildschirmen */
+        gap: 20px; /* Abstand zwischen den Glocken in der Mitte */
+
+    }
+}
+

@@ -1,0 +1,175 @@
+/* Allgemein */
+body {
+    font-family: "Calibri", "Arial", sans-serif;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+    background: #FAF5E0;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #9c2828;
+    padding: 15px 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin: 0 15px;
+    font-size: 1.2rem;
+}
+
+header nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+h1 {
+    color: #9c2828;
+    font-family: "Berlin Sans FB", "Arial", sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 35px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list.active {
+    display: block;
+}
+
+.activities-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.activities-container {
+    display: flex;
+    flex-wrap: wrap; /* Ermöglicht Zeilenumbruch bei kleinen Bildschirmen */
+    justify-content: flex-start; /* Zentriert die Boxen horizontal */
+    padding: 20px;
+    max-width: 50%; /* Abstand zwischen Boxen */
+    gap: 60px; /* zusätzlich Abstand zwischen den Boxen */
+    margin: 0 auto; /* Zentrierung des gesamten Containers */
+}
+
+.activity-item {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px); /* Boxen nehmen ein Drittel des Containers minus den Abstand ein */
+    min-width: 130px; /* Minimale Breite, bevor der Zeilenumbruch erfolgt */
+    max-width: 600px; /* Maximale Breite der Box */
+    text-align: center;
+    /*transition: transform 0.3s ease;*/
+}
+
+.activity-item:hover {
+    transform: scale(1.05);
+}
+
+.activity-item img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.activity-item h3 {
+    color: #9c2828;
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #b22222;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #800000;
+}
+
+/* Footer */
+footer {
+    font-size: 14px;
+    background: #9c2828;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    line-height: 0.5;
+}
+
+footer .legal {
+    margin-bottom: 20px; /* Abstand nur für den letzten Bereich im Footer */
+}
+
+footer a {
+    color: #461002; /* Ändere die Linkfarbe auf Gelb */
+    text-decoration: none; /* Entfernt die Unterstreichung */
+    font-weight: bold; /* Macht den Link fett */
+
+}
+
+footer a:hover {
+    color: white; /* Ändere die Linkfarbe beim Hover auf Weiß */
+    text-decoration: underline; /* Zeigt eine Unterstreichung beim Hover */
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background: #9c2828;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        text-align: center;
+        margin: 10px 0;
+    }
+}
